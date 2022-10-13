@@ -6,3 +6,31 @@
   border-radius: 12px;
   padding: 20px;
 }
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.card-content {
+  text-align: left;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.badge {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 12px;
+}
