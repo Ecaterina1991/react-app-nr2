@@ -14,7 +14,7 @@ function TaskCard() {
         <p>Create a Design System for Enum Workspace.</p>
       </div>
       <div className="card-footer">
-        <div>
+        <div className="due-date">
           <p>Due Date</p>
           <p>24/ 01/ 2021</p>
         </div>
