@@ -10,8 +10,15 @@ function TaskCard() {
           <p>Todo</p>
         </div>
       </div>
-      <div className="card-content"></div>
-      <div className="card-footer"></div>
+      <div className="card-content">
+        <p>Create a Design System for Enum Workspace.</p>
+      </div>
+      <div className="card-footer">
+        <div>
+          <p>Due Date</p>
+          <p>24/ 01/ 2021</p>
+        </div>
+      </div>
     </div>
   );
 }
