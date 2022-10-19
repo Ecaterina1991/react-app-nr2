@@ -25,7 +25,6 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* <TaskContainer data = {data}/> */}
       <TaskCard
         id={data[0].id}
         status={data[0].status}
