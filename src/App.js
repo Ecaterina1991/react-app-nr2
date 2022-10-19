@@ -1,5 +1,6 @@
 import "./App.css";
-import TaskCard from "./components/task-card/TaskCard";
+// import TaskCard from "./components/task-card/TaskCard";
+import TaskViewer from "./components/task-viewer/TaskViewer";
 
 function App() {
   const data = [
@@ -21,28 +22,33 @@ function App() {
       status: "Complete",
       dueDate: new Date(2022, 6, 13),
     },
+    {
+      id: "T-4",
+      name: "14 Create a Design System for Enum Workspace",
+      status: "Complete",
+      dueDate: new Date(2022, 6, 13),
+    },
+
+    {
+      id: "T-5",
+      name: "13 Create a Design System for Enum Workspace",
+      status: "Complete",
+      dueDate: new Date(2022, 6, 13),
+    },
+    {
+      id: "T-6",
+      name: "14 Create a Design System for Enum Workspace",
+      status: "Complete",
+      dueDate: new Date(2022, 6, 13),
+    },
   ];
 
   return (
     <div className="app-container">
-      <TaskCard
-        id={data[0].id}
-        status={data[0].status}
-        name={data[0].name}
-        dueDate={data[0].dueDate}
-      />
-      <TaskCard
-        id={data[1].id}
-        status={data[1].status}
-        name={data[1].name}
-        dueDate={data[1].dueDate}
-      />
-      <TaskCard
-        id={data[2].id}
-        status={data[2].status}
-        name={data[2].name}
-        dueDate={data[2].dueDate}
-      />
+      <div className="app-content">
+        <h3>Task manager</h3>
+        <TaskViewer taskList={data} />
+      </div>
     </div>
   );
 }
