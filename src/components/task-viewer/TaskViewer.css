@@ -1,5 +1,18 @@
+.task-viewer-container {
+  max-width: 100%;
+  height: auto;
+  background-color: lightgray;
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .task-list-container {
+  max-width: 100vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-left: 120px;
 }
