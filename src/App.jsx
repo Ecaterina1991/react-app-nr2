@@ -2,6 +2,9 @@ import React from "react";
 import "./App.css";
 // import TaskCard from "./components/task-card/TaskCard";
 import TaskViewer from "./components/task-viewer/TaskViewer";
+import CreateTaskForm from "./components/forms/CreateTaskForm";
+
+//const data = [...];
 
 function App() {
   const data = [
@@ -60,9 +63,18 @@ function App() {
   // );
 
   return (
-    <div className="app-container">
-      <div className="app-content">
-        <TaskViewer taskList={data} />
+    <div className="wrapper">
+      <div className="app-container">
+        <div className="app-content">
+          <TaskViewer taskList={data} />
+
+          <div className="side-bar-right">
+            <div className="card-xl">
+              <h3>Create task</h3>
+              <CreateTaskForm />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

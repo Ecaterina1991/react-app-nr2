@@ -5,3 +5,23 @@
   justify-content: center;
   align-items: center;
 }
+
+.side-bar-right {
+  background-color: white;
+  box-shadow: 0px 30px 60px rgba(32, 56, 85, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border: none;
+  border-radius: 18px;
+  width: 350px;
+  height: 700px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
