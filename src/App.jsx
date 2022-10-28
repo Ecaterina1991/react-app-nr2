@@ -70,7 +70,7 @@ function App() {
 
           <div className="side-bar-right">
             <div className="card-xl">
-              <h3>Create task</h3>
+              <h3 className="h3">Create task</h3>
               <CreateTaskForm />
             </div>
           </div>

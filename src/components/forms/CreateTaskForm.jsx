@@ -7,20 +7,28 @@ const CreateTaskForm = () => {
       <form>
         <div className="form-row">
           <label>Task Name</label>
-          <input type="text" />
+          <input className="case" type="text" />
         </div>
 
         <div className="form-row">
           <label>Due Date</label>
-          <input type="date" />
+          <input className="case" type="date" />
         </div>
 
         <div className="form-row">
           <label>Task Details</label>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <textarea
+            className="textarea"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
         </div>
 
-        <button type="submit">Create Task</button>
+        <button className="button" type="submit">
+          Create Task
+        </button>
       </form>
     </div>
   );
