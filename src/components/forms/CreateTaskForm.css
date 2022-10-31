@@ -4,20 +4,28 @@
   margin: 25px 0;
 }
 
-.case {
+.label-md {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2c2e3a;
+}
+
+.input-primary {
+  border: 1px solid #a8abbd;
   border-radius: 12px;
-  padding: 10px;
-  border-color: gray;
+  padding: 16px;
 }
 
 .textarea {
   border-radius: 12px;
 }
 
-.button {
+.button-primary {
   font-size: 16px;
   border-radius: 12px;
-  padding: 15px 50px;
+  padding: 19px 74px;
   border: none;
   border-radius: 12px;
   background-color: rgb(73, 73, 204);
