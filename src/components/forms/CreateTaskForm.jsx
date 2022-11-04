@@ -29,6 +29,9 @@ const CreateTaskForm = () => {
     };
 
     console.log("newTask= ", newTask);
+    setTaskName("Submit");
+    setDueDate("");
+    setTaskDetails("");
   };
 
   // const [formData, setFormData] = useState({
@@ -87,6 +90,7 @@ const CreateTaskForm = () => {
         <div className="form-row">
           <label className="label-md">Task Name</label>
           <input
+            value={taskName}
             name="taskName"
             onChange={handleNameChange}
             className="input-primary"
@@ -97,6 +101,7 @@ const CreateTaskForm = () => {
         <div className="form-row">
           <label className="label-md">Due Date</label>
           <input
+            value={dueDate}
             name="dueDate"
             onChange={handleDateChange}
             className="input-primary"
@@ -107,11 +112,10 @@ const CreateTaskForm = () => {
         <div className="form-row">
           <label className="label-md">Task Details</label>
           <textarea
+            value={taskDetails}
             name="taskDetails"
             onChange={handleDetailsChange}
             className="input-primary"
-            name=""
-            id=""
             cols="30"
             rows="10"
           ></textarea>
