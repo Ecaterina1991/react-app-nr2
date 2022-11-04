@@ -52,6 +52,15 @@ function App() {
 
   const onNewTaskAdd = (newTask) => {
     console.log("task form APP.js", newTask);
+
+    setTaskList((prevState) => [
+      ...prevState,
+      {
+        ...newTask,
+        dueDate: new Date(newTask.dueDate),
+        id: "T-" + prevState.length + 1,
+      },
+    ]);
   };
 
   return (
