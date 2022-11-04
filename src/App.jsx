@@ -3,75 +3,67 @@ import "./App.css";
 // import TaskCard from "./components/task-card/TaskCard";
 import TaskViewer from "./components/task-viewer/TaskViewer";
 import CreateTaskForm from "./components/forms/CreateTaskForm";
+import { useState } from "react";
 
 //const data = [...];
 
+const data = [
+  {
+    id: "T-1",
+    name: "Create a Design System for Enum Workspace",
+    status: "Todo",
+    dueDate: new Date(2022, 5, 23),
+  },
+  {
+    id: "T-2",
+    name: "12 Create a Design System for Enum Workspace",
+    status: "In Progress",
+    dueDate: new Date(2022, 7, 24),
+  },
+  {
+    id: "T-3",
+    name: "13 Create a Design System for Enum Workspace",
+    status: "Complete",
+    dueDate: new Date(2022, 6, 13),
+  },
+  {
+    id: "T-4",
+    name: "14 Create a Design System for Enum Workspace",
+    status: "Complete",
+    dueDate: new Date(2022, 6, 13),
+  },
+
+  {
+    id: "T-5",
+    name: "13 Create a Design System for Enum Workspace",
+    status: "Complete",
+    dueDate: new Date(2022, 6, 13),
+  },
+  {
+    id: "T-6",
+    name: "14 Create a Design System for Enum Workspace",
+    status: "Complete",
+    dueDate: new Date(2022, 6, 13),
+  },
+];
+
 function App() {
-  const data = [
-    {
-      id: "T-1",
-      name: "Create a Design System for Enum Workspace",
-      status: "Todo",
-      dueDate: new Date(2022, 5, 23),
-    },
-    {
-      id: "T-2",
-      name: "12 Create a Design System for Enum Workspace",
-      status: "In Progress",
-      dueDate: new Date(2022, 7, 24),
-    },
-    {
-      id: "T-3",
-      name: "13 Create a Design System for Enum Workspace",
-      status: "Complete",
-      dueDate: new Date(2022, 6, 13),
-    },
-    {
-      id: "T-4",
-      name: "14 Create a Design System for Enum Workspace",
-      status: "Complete",
-      dueDate: new Date(2022, 6, 13),
-    },
+  const [taskList, setTaskList] = useState(data);
 
-    {
-      id: "T-5",
-      name: "13 Create a Design System for Enum Workspace",
-      status: "Complete",
-      dueDate: new Date(2022, 6, 13),
-    },
-    {
-      id: "T-6",
-      name: "14 Create a Design System for Enum Workspace",
-      status: "Complete",
-      dueDate: new Date(2022, 6, 13),
-    },
-  ];
-
-  // return React.createElement(
-  //   `div`,
-  //   {
-  //     className: "app-container",
-  //   },
-  //   React.createElement(
-  //     "div",
-  //     {
-  //       className: "app-content",
-  //     },
-  //     React.createElement("h3", {}, ""),
-  //     React.createElement(TaskViewer, { taskList: data })
-  //   )
-  // );
+  const onNewTaskAdd = (newTask) => {
+    console.log("task form APP.js", newTask);
+  };
 
   return (
     <div className="wrapper">
       <div className="app-container">
         <div className="app-content">
-          <TaskViewer taskList={data} />
+          <TaskViewer taskList={taskList} />
 
           <div className="side-bar-right">
             <div className="card-xl">
               <h3 className="h3">Create task</h3>
-              <CreateTaskForm />
+              <CreateTaskForm addNewTask={onNewTaskAdd} />
             </div>
           </div>
         </div>
