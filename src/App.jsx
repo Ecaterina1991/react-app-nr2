@@ -1,9 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-// import TaskCard from "./components/task-card/TaskCard";
 import TaskViewer from "./components/task-viewer/TaskViewer";
 import CreateTaskForm from "./components/forms/CreateTaskForm";
-import { useState } from "react";
 import Modal from "./components/modal/Modal";
 
 //const data = [...];
@@ -52,8 +50,6 @@ function App() {
   const [taskList, setTaskList] = useState(data);
 
   const onNewTaskAdd = (newTask) => {
-    console.log("task form APP.js", newTask);
-
     setTaskList((prevState) => [
       ...prevState,
       {
@@ -67,16 +63,8 @@ function App() {
   return (
     <div className="app-container">
       <div className="app-content">
-        <TaskViewer taskList={taskList} />
-
-        <div className="side-bar-right">
-          <div className="card-xl">
-            <h3 className="h3">Create task</h3>
-            <CreateTaskForm addNewTask={onNewTaskAdd} />
-          </div>
-        </div>
+        <TaskViewer onNewTaskAdd={onNewTaskAdd} taskList={taskList} />
       </div>
-      <Modal />
     </div>
   );
 }
