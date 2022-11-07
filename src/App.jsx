@@ -4,6 +4,7 @@ import "./App.css";
 import TaskViewer from "./components/task-viewer/TaskViewer";
 import CreateTaskForm from "./components/forms/CreateTaskForm";
 import { useState } from "react";
+import Modal from "./components/modal/Modal";
 
 //const data = [...];
 
@@ -64,19 +65,18 @@ function App() {
   };
 
   return (
-    <div className="wrapper">
-      <div className="app-container">
-        <div className="app-content">
-          <TaskViewer taskList={taskList} />
+    <div className="app-container">
+      <div className="app-content">
+        <TaskViewer taskList={taskList} />
 
-          <div className="side-bar-right">
-            <div className="card-xl">
-              <h3 className="h3">Create task</h3>
-              <CreateTaskForm addNewTask={onNewTaskAdd} />
-            </div>
+        <div className="side-bar-right">
+          <div className="card-xl">
+            <h3 className="h3">Create task</h3>
+            <CreateTaskForm addNewTask={onNewTaskAdd} />
           </div>
         </div>
       </div>
+      <Modal />
     </div>
   );
 }

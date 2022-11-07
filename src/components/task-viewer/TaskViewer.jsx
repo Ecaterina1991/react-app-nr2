@@ -5,6 +5,16 @@ import TaskCard from "../task-card/TaskCard";
 function TaskViewer(props) {
   return (
     <div className="task-viewer-container">
+      <div className="control-panel-container">
+        <div>
+          <h3 className="view-title">Tasks</h3>
+          <p className="subtitle">Your task in your space</p>
+          <button className="button-primary" type="submit">
+            Create Task
+          </button>
+        </div>
+      </div>
+
       <div className="task-list-container">
         {props.taskList.map((item, index) => (
           <TaskCard

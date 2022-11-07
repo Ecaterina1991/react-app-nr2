@@ -1,18 +1,27 @@
 .task-viewer-container {
-  max-width: 100%;
-  height: auto;
-  background-color: lightgray;
-  border: none;
-  border-radius: 30px;
+  background-color: #f3f3fb;
+  border-radius: 50px;
+  padding: 40px 0;
+  flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+}
+
+.task-viewer-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 
 .task-list-container {
-  max-width: 100vh;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-left: 120px;
+  padding: 0 40px;
+  flex: 1;
+  overflow: auto;
+}
+
+.task-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-auto-rows: minmax(min-content, max-content);
+  justify-items: flex-start;
+  justify-content: space-between;
+  gap: 40px 50px;
 }
