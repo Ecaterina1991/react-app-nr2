@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./ControlPanel.css";
-import Modal from "..modal/Modal";
+import Modal from "../modal/Modal";
 import CreateTaskForm from "../forms/CreateTaskForm";
 
 const ControlPanel = (props) => {
@@ -25,11 +25,11 @@ const ControlPanel = (props) => {
         <h3 className="view-title">Tasks</h3>
         <p className="subtitle">Your task in your space</p>
       </div>
-      <button onClick={openModal} className="button-primary" type="submit">
+      <button onClick={openModal} className="button-primary">
         Create Task
       </button>
       <Modal onClose={closeModal} isOpen={isOpen}>
-        <h3 className="h3">Create task</h3>
+        <h3>Create task</h3>
         <CreateTaskForm addNewTask={handleNewTaskAdd} />
       </Modal>
     </div>

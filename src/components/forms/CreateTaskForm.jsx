@@ -39,56 +39,6 @@ const CreateTaskForm = (props) => {
     resetForm();
   };
 
-  // const [formData, setFormData] = useState({
-  //   taskName: "",
-  //   dueDate: "",
-  //   taskDetails: "",
-  // });
-
-  /*
-  const handleNameChange = (event) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      taskName: event.target.value,
-    }));
-    //setTaskName(event.target.value);
-  };
-
-  const handleDateChange = (event) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      dueDate: event.target.value,
-    }));
-    //setDueDate(event.target.value);
-  };
-
-  const handleDetailsChange = (event) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      taskDetails: event.target.value,
-    }));
-    //setTaskDetails(event.target.value);
-  };*/
-
-  // const handleInputChange = (event) => {
-  //   setFormData((prevState) => ({
-  //     ...prevState,
-  //     [event.target.name]: event.target.value,
-  //   }));
-  // };
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   console.log("formData", formData);
-
-  // const newTask = {
-  //   name: taskName,
-  //   dueDate: dueDate,
-  //   taskDetails: taskDetails,
-  //   status: "To do",
-  // };
-  // console.log("newTask = ", newTask);
-
   return (
     <div>
       <form onSubmit={handleSubmit}>

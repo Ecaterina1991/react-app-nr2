@@ -7,6 +7,7 @@ function TaskViewer(props) {
   return (
     <div className="task-viewer-container">
       <ControlPanel onNewTaskAdd={props.onNewTaskAdd} />
+
       <div className="task-list-container">
         {props.taskList.map((item, index) => (
           <TaskCard
