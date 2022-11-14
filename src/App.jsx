@@ -22,33 +22,33 @@ const data = [
   {
     id: "T-3",
     name: "13 Create a Design System for Enum Workspace",
-    status: "Complete",
+    status: "Completed",
     dueDate: new Date(2022, 6, 13),
   },
   {
     id: "T-4",
     name: "14 Create a Design System for Enum Workspace",
-    status: "Complete",
+    status: "Completed",
     dueDate: new Date(2022, 6, 13),
   },
 
   {
     id: "T-5",
     name: "13 Create a Design System for Enum Workspace",
-    status: "Complete",
+    status: "Pending",
     dueDate: new Date(2022, 6, 13),
   },
   {
     id: "T-6",
     name: "14 Create a Design System for Enum Workspace",
-    status: "Complete",
+    status: "Completed",
     dueDate: new Date(2022, 6, 13),
   },
 ];
 
 function App() {
   const [taskList, setTaskList] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
   const onNewTaskAdd = (newTask) => {
     setTaskList((prevState) => [
