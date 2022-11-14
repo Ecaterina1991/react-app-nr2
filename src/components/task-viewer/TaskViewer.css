@@ -18,6 +18,12 @@
 } */
 
 .task-list-container {
+  padding: 0 40px;
+  flex: 1;
+  overflow: auto;
+}
+
+.task-list-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
   grid-auto-rows: minmax(min-content, max-content);

@@ -47,7 +47,7 @@ const data = [
 ];
 
 function App() {
-  const [taskList, setTaskList] = useState(data);
+  const [taskList, setTaskList] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
   const onNewTaskAdd = (newTask) => {
